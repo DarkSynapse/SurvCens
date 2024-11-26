@@ -20,4 +20,4 @@ Install the `SurvCens` package directly from GitHub using:
 install.packages("devtools")
 
 # Install SurvCens from GitHub
-devtools::install_github("yourusername/SurvCens")
+devtools::install_github("DarkSynapse/SurvCens")
