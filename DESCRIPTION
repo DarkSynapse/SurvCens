@@ -1,12 +1,13 @@
 Package: SurvCens
+Type: Package
 Title: SurvCens is an R package for censoring survival data and competing risks, simplifying data preparation for survival analysis.
 Version: 0.1
-Authors@R: 
-    person("Nikita", "Volkov", , "zac-nikita@yandex.ru", 
-           comment = c(ORCID = "0000-0001-6161-1444"))
-Description: Provides functions for censoring survival data and competing risks.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Author: Nikita Volkov [aut, cre] (<zac-nikita@yandex.ru>)
+Maintainer: Nikita Volkov <zac-nikita@yandex.ru>
+Description: SurvCens is an R package for censoring survival data and competing risks, simplifying data preparation for survival analysis.
+License: GPL-3
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
+LazyData: true
+Imports:
+    dplyr
 RoxygenNote: 7.3.2
