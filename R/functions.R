@@ -96,10 +96,10 @@ cmprsk_cut <- function(date_end,
                        data) {
   fu_time <- as.numeric(as.Date(date_end) - as.Date(date_start)) / cens_time
   
-  relstatus <- ifelse(is.na(cmprsk_date), status, cmprsk_name)
+  relstatus <- ifelse(is.na(cmprsk_date), status , cmprsk_name)
   relstatus <- ifelse(relstatus == 1, status_name, relstatus)
-  reldays <- as.numeric(as.Date(cmprsk_date) - as.Date(date_start)) / cens_time
-  reltime <- ifelse(is.na(reldays), fu_time, reldays)
+  reldays <- as.numeric(as.Date(cmprsk_date) - as.Date(date_start))
+  reltime <- ifelse(is.na(reldays), fu_time , reldays)
   statusn <- as.factor(ifelse(reltime >= cutoff_time, 0, relstatus))
   time <- ifelse(reltime > cutoff_time, cutoff_time, reltime)
   
@@ -110,5 +110,6 @@ cmprsk_cut <- function(date_end,
                      c(status_col_name, time_col_name))
   
   cbind(data, result)
+  
 }
 
